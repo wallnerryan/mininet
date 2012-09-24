@@ -30,25 +30,25 @@ class FoursTopo( Topo ):
 	switch = Node( is_switch=True ) 
 	host = Node( is_switch=False )
 
-  # Add nodes
-  self.add_node( leftSwitch, switch )
-  self.add_node( rightSwitch, switch )
-  self.add_node( bottomLeftSwitch, switch)
-  self.add_node( bottomRightSwitch, switch)
+ 	 # Add nodes
+  	self.add_node( leftSwitch, switch )
+  	self.add_node( rightSwitch, switch )
+  	self.add_node( bottomLeftSwitch, switch)
+  	self.add_node( bottomRightSwitch, switch)
         
-   self.add_node( leftTopHost, host )
-   self.add_node( rightTopHost, host )
-   self.add_node( bottomLeftHost, host )
-   self.add_node( bottomRightHost, host )
+   	self.add_node( leftTopHost, host )
+   	self.add_node( rightTopHost, host )
+   	self.add_node( bottomLeftHost, host )
+   	self.add_node( bottomRightHost, host )
 
-   # Add edges
-   self.add_edge( leftTopHost, leftSwitch )
-   self.add_edge( rightSwitch, rightTopHost )
-   self.add_edge( bottomLeftHost, bottomLeftSwitch )
-   self.add_edge( bottomRightSwitch, bottomRightHost )
+   	# Add edges
+   	self.add_edge( leftTopHost, leftSwitch )
+   	self.add_edge( rightSwitch, rightTopHost )
+   	self.add_edge( bottomLeftHost, bottomLeftSwitch )
+   	self.add_edge( bottomRightSwitch, bottomRightHost )
         
-   #Switch Edges to support full mesh
-   self.add_edge( leftSwitch, rightSwitch )
+   	#Switch Edges to support full mesh
+   	self.add_edge( leftSwitch, rightSwitch )
  	self.add_edge( bottomLeftSwitch, bottomRightSwitch )
 	self.add_edge( bottomLeftSwitch, rightSwitch )
 	self.add_edge( leftSwitch, bottomRightSwitch )
